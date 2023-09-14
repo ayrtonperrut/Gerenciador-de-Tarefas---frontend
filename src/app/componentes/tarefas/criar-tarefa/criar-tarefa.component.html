@@ -1,0 +1,19 @@
+<section class="container criar-tarefas ff-inter">
+  <header class="header">
+    <h2>Adicione uma tarefa:</h2>
+    <form [formGroup]="formulario" *ngIf="formulario">
+      <label for="tarefa">Tarefa</label>
+      <input type="textarea"
+             class="input"
+             id="tarefa"
+             formControlName="titulo"
+             placeholder="Digite título da tarefa"
+            >
+      <div class="acoes">
+        <button class="botao" (click)="criarTarefa()">Salvar</button>
+        <button  class="botao" routerLink="/listarTarefa">Cancelar</button>
+      </div>
+    </form>
+  </header>
+
+</section>

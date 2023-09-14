@@ -1,0 +1,19 @@
+<section class="container editar-tarefa ff-inter">
+  <header class="header">
+    <h2> Editar Tarefa</h2>
+
+    <form [formGroup]="formulario" *ngIf="formulario">
+      <label for="tarefa">Tarefa</label>
+      <input type="textarea"
+             class="input"
+             id="tarefa"
+             formControlName="titulo"
+             placeholder="Digite o título da tarefa">
+
+      <div class="acoes">
+        <button class="botao" (click)="editarTarefa()">Salvar</button>
+         <button class="botao" (click)="cancelar()">Cancelar</button>
+      </div>
+    </form>
+  </header>
+</section>

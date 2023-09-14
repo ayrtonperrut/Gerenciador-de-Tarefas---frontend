@@ -1,0 +1,16 @@
+<section class="container">
+  <header class="header d-flex">
+
+    <h2 class="ff-inter">Lista de Tarefas</h2>
+
+    <button class="botao" routerLink="/criarTarefa">Nova Tarefa</button>
+  </header>
+
+  <div class="mural">
+    <div *ngFor="let tarefa of listaDeTarefas">
+        <app-tarefa
+          [tarefa]="tarefa"
+        ></app-tarefa>
+    </div>
+  </div>
+</section>

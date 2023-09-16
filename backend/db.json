@@ -2,15 +2,67 @@
   "tarefa": [
     {
       "id": 1,
-      "titulo": "Primeira tarefa"
+      "titulo": "Primeira tarefa",
+      "itens": [
+        {
+          "nome": "Primeira subtarefa"
+        },
+        {
+          "nome": "cu, piru, buceta"
+        },
+        {
+          "nome": "teste subs huehue"
+        },
+        {
+          "nome": "Quer apostar quanto que vai ser add mais um item na lista?"
+        },
+        {
+          "id": 5,
+          "nome": "Teste criacao do id"
+        }
+      ]
     },
     {
       "id": 2,
-      "titulo": "Teste Altera"
+      "titulo": "Teste Altera",
+      "itens": [
+        {
+          "nome": "Subtarefa teste"
+        },
+        {
+          "nome": "Teste com ID"
+        }
+      ]
     },
     {
+      "id": 3,
       "titulo": "Teste Primeira Tarefa",
-      "id": 3
+      "itens": [
+        {
+          "nome": "Terceira subtarefa"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "titulo": "Tarefinha teste",
+      "itens": [
+        {
+          "nome": "subtarefa"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "titulo": "Nova tarefinhainhainha"
+    },
+    {
+      "id": 6,
+      "titulo": "teste Editar 2"
+    },
+    {
+      "titulo": "teste onde sairá o id?",
+      "id": 8
     }
   ]
 }

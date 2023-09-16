@@ -1,5 +1,5 @@
-<div class="tarefa ff-roboto-mono">
- <p class="titulo"> {{ tarefa.titulo }}</p>
+<div class="tarefa ff-roboto-mono" routerLink="/tarefa/tarefaDetalhe/{{ tarefa.id }}">
+   <p class="titulo"> {{ tarefa.titulo }}</p>
   <div class="acoes">
     <button class="botao-editar" routerLink="/tarefa/editarTarefa/{{ tarefa.id }}">
       <img src="../../../../assets/icone-editar.png" alt="Icone editar">

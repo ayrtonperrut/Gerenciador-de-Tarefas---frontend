@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Tarefa } from '../tarefa';
+import { Item, Tarefa } from '../tarefa';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TarefaService } from '../tarefa.service';
 
@@ -10,9 +10,12 @@ import { TarefaService } from '../tarefa.service';
 })
 export class ExcluirTarefaComponent implements OnInit {
 
+  item!: Item
+  listaItens = [this.item]
   tarefa: Tarefa = {
     id: 0,
-    titulo: ''
+    titulo: '',
+    itens: this.listaItens
   }
 
   constructor(private service: TarefaService,

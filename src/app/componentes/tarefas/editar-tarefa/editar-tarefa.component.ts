@@ -15,12 +15,12 @@ export class EditarTarefaComponent implements OnInit {
   constructor(private service: TarefaService,
     private router: Router,
     private route: ActivatedRoute,
-    private FormBuilder: FormBuilder) { }
+    private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id')
     this.service.getById(parseInt(id!)).subscribe((tarefa) => {
-      this.formulario = this.FormBuilder.group({
+      this.formulario = this.formBuilder.group({
         id: [tarefa.id],
         titulo: [tarefa.titulo]
       })

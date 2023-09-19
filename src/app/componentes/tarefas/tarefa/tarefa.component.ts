@@ -1,4 +1,3 @@
-import { Item } from './../tarefa';
 import { Component, Input, OnInit } from '@angular/core';
 import { Tarefa } from '../tarefa';
 import { TarefaService } from '../tarefa.service';
@@ -16,13 +15,9 @@ export class TarefaComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  item!: Item
-  listaItens = [this.item]
-
   @Input() tarefa: Tarefa = {
-    id: 0,
+    id: 1,
     titulo: 'Primeira Tarefa',
-    itens: this.listaItens
   }
 
 }

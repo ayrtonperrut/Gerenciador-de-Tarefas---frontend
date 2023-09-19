@@ -2,67 +2,119 @@
   "tarefa": [
     {
       "id": 1,
-      "titulo": "Primeira tarefa",
-      "itens": [
-        {
-          "nome": "Primeira subtarefa"
-        },
-        {
-          "nome": "cu, piru, buceta"
-        },
-        {
-          "nome": "teste subs huehue"
-        },
-        {
-          "nome": "Quer apostar quanto que vai ser add mais um item na lista?"
-        },
-        {
-          "id": 5,
-          "nome": "Teste criacao do id"
-        }
-      ]
+      "titulo": "Primeira tarefa"
+    },
+    {
+      "titulo": "Teste Inclusao",
+      "id": 2
+    },
+    {
+      "titulo": "Arrumar a casa",
+      "id": 3
+    }
+  ],
+  "item": [
+    {
+      "id": 1,
+      "tarefa_id": 1,
+      "nome": "teste subtask",
+      "tempo": 4
     },
     {
       "id": 2,
-      "titulo": "Teste Altera",
-      "itens": [
-        {
-          "nome": "Subtarefa teste"
-        },
-        {
-          "nome": "Teste com ID"
-        }
-      ]
+      "tarefa_id": 1,
+      "nome": "teste subtask - 2",
+      "tempo": 2
     },
     {
-      "id": 3,
-      "titulo": "Teste Primeira Tarefa",
-      "itens": [
-        {
-          "nome": "Terceira subtarefa"
-        }
-      ]
+      "tarefa_id": 1,
+      "nome": "Teste novo item via input",
+      "tempo": "3",
+      "id": 3
     },
     {
-      "id": 7,
-      "titulo": "Tarefinha teste",
-      "itens": [
-        {
-          "nome": "subtarefa"
-        }
-      ]
+      "tarefa_id": 1,
+      "nome": "Teste novo item via input",
+      "tempo": "3",
+      "id": 4
     },
     {
-      "id": 5,
-      "titulo": "Nova tarefinhainhainha"
+      "tarefa_id": 1,
+      "nome": "teste teste",
+      "tempo": "5",
+      "id": 5
     },
     {
-      "id": 6,
-      "titulo": "teste Editar 2"
+      "tarefa_id": 1,
+      "nome": "teste",
+      "tempo": "4",
+      "id": 6
     },
     {
-      "titulo": "teste onde sairá o id?",
+      "tarefa_id": 2,
+      "nome": "test",
+      "tempo": "2",
+      "id": 7
+    },
+    {
+      "tarefa_id": 1,
+      "nome": "ttt",
+      "tempo": "3",
       "id": 8
+    },
+    {
+      "tarefa_id": 1,
+      "nome": "fecha modal",
+      "tempo": "4",
+      "id": 9
+    },
+    {
+      "tarefa_id": 1,
+      "nome": "t",
+      "tempo": "4",
+      "id": 10
+    },
+    {
+      "tarefa_id": 1,
+      "nome": "teste",
+      "tempo": "4",
+      "id": 11
+    },
+    {
+      "tarefa_id": 2,
+      "nome": "Nova para um novo",
+      "tempo": "3",
+      "id": 12
+    },
+    {
+      "tarefa_id": 2,
+      "nome": "t",
+      "tempo": "5",
+      "id": 13
+    },
+    {
+      "tarefa_id": 1,
+      "nome": "Teste novo item com nova rota",
+      "tempo": "5",
+      "id": 14
+    },
+    {
+      "tarefa_id": 3,
+      "id": 15,
+      "nome": "Varrer a casa [EDITADO]",
+      "tempo": "2h 30m"
+    },
+    {
+      "tarefa_id": 3,
+      "id": 16,
+      "nome": "Lavar a louça [EDITADO]",
+      "tempo": "30m"
+    },
+    {
+      "tarefa_id": 3,
+      "id": 17,
+      "nome": "Lavar o banheiro [EDITADO]",
+      "tempo": "2h 15m"
     }
   ]
 }

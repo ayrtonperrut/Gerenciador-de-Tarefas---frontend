@@ -1,0 +1,25 @@
+<section class="container editar-item ff-inter">
+  <header class="header">
+    <h2>Editar Subtarefa:</h2>
+    <form [formGroup]="formulario" *ngIf="formulario">
+      <label for="'item'">Item</label>
+      <input type="textarea"
+             class="input"
+             id="nome"
+             formControlName="nome"
+             placeholder="Digite título da subtarefa"
+            >
+      <input type="textarea"
+             class="input"
+             id="tempo"
+             formControlName="tempo"
+             placeholder="Digite tempo a ser executado"
+            >
+
+      <div class="acoes">
+        <button class="botao" (click)="editarItem()">Salvar</button>
+        <button  class="botao" routerLink="/tarefa/tarefaDetalhe/{{this.tarefa_id}}">Cancelar</button>
+      </div>
+    </form>
+  </header>
+</section>

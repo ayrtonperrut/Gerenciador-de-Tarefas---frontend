@@ -5,6 +5,8 @@ import { ListarTarefaComponent } from './componentes/tarefas/listar-tarefa/lista
 import { EditarTarefaComponent } from './componentes/tarefas/editar-tarefa/editar-tarefa.component';
 import { ExcluirTarefaComponent } from './componentes/tarefas/excluir-tarefa/excluir-tarefa.component';
 import { TarefaDetalheComponent } from './componentes/tarefas/tarefa-detalhe/tarefa-detalhe.component';
+import { CriarItemComponent } from './componentes/tarefas/itens/criar-item/criar-item.component';
+import { EditarItemComponent } from './componentes/tarefas/itens/editar-item/editar-item.component';
 
 const routes: Routes = [
   {path: '',
@@ -30,6 +32,14 @@ const routes: Routes = [
 {
   path: 'tarefa/tarefaDetalhe/:id',
   component: TarefaDetalheComponent
+},
+{
+  path: 'tarefa/tarefaDetalhe/:tarefaId/criarItem',
+  component: CriarItemComponent
+},
+{
+  path: 'item/editarItem/:id',
+  component: EditarItemComponent
 }
 ];
 

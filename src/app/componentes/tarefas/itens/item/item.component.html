@@ -1,0 +1,34 @@
+<!-- <div class="item ff-roboto-mono">
+  <p class="titulo"> {{ item.nome }}</p>
+  <p class="titulo"> {{ item.tempo }}</p>
+ <div class="acoes">
+   <button class="botao-editar" routerLink="/tarefa/editarTarefa/{{ tarefa.id }}">
+     <img src="../../../../assets/icone-editar.png" alt="Icone editar">
+   </button>
+   <button class="botao-excluir" routerLink="tarefa/excluirTarefa/{{ tarefa.id }}">
+     <img src="../../../../assets/icone-excluir.png" alt="Icone excluir">
+   </button>
+ </div>-->
+
+<table>
+  <thead>
+      <th>Subtarefa</th>
+      <th>Tempo</th>
+      <th>Ações</th>
+  </thead>
+  <tbody>
+      <tr>
+          <td>{{item.nome}}</td>
+          <td>{{item.tempo}}</td>
+          <td>
+            <div class="acoes">
+              <button class="botao-editar" routerLink="/item/editarItem/{{ item.id }}">
+                <img src="../../../../assets/icone-editar.png" alt="Icone editar">
+              </button>
+              <button class="botao-excluir">
+                <img src="../../../../assets/icone-excluir.png" alt="Icone excluir"></button>
+            </div>
+          </td>
+      </tr>
+  </tbody>
+</table>

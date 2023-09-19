@@ -12,6 +12,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditarTarefaComponent } from './componentes/tarefas/editar-tarefa/editar-tarefa.component';
 import { ExcluirTarefaComponent } from './componentes/tarefas/excluir-tarefa/excluir-tarefa.component';
 import { TarefaDetalheComponent } from './componentes/tarefas/tarefa-detalhe/tarefa-detalhe.component';
+import { ItemComponent } from './componentes/tarefas/itens/item/item.component';
+import { CriarItemComponent } from './componentes/tarefas/itens/criar-item/criar-item.component';
+import { EditarItemComponent } from './componentes/tarefas/itens/editar-item/editar-item.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { TarefaDetalheComponent } from './componentes/tarefas/tarefa-detalhe/tar
     TarefaComponent,
     EditarTarefaComponent,
     ExcluirTarefaComponent,
-    TarefaDetalheComponent
+    TarefaDetalheComponent,
+    ItemComponent,
+    CriarItemComponent,
+    EditarItemComponent
   ],
   imports: [
     BrowserModule,

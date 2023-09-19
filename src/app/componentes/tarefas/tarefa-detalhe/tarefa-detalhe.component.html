@@ -4,51 +4,17 @@
       <h3>Título: {{tarefa.titulo}}</h3>
     </div>
     <div class="acao">
-      <button class="botao" (click)="chamaModalSubtarefa()"> Adicionar subtarefa</button>
-      <button class="botao" [routerLink]="['/listarTarefa']">Voltar</button>
+      <button class="botao" routerLink="criarItem" routerLinkActive="router-link-active" > Adicionar subtarefa</button>
+      <button class="botao" (click)="voltar()">Voltar</button>
     </div>
   </header>
+</section>
 
-  <section class="container criar-subtarefas ff-inter">
-    <ng-container *ngIf="isOpenModal">
-          <h2> Adicionar subtarefa</h2>
-          <form [formGroup]="formulario" *ngIf="formulario">
-            <label for="itens">Subtarefa</label>
-            <input type="textarea"
-                  class="input"
-                  id="itens"
-                  formControlName="itens"
-                  placeholder="Digite o nome da subtarefa">
-
-            <div class="acoes">
-              <button class="botao" (click)="adicionarSubtarefa()">Salvar</button>
-              <button class="botao" (click)="cancelar()">Cancelar</button>
-            </div>
-          </form>
-    </ng-container>
-
-    <div class="grid d-flex ff-inter" *ngIf="tarefa" >
-      <table>
-        <thead>
-            <th>Subtarefa</th>
-            <th>Ações</th>
-        </thead>
-        <tbody>
-            <tr *ngFor="let subtarefa of tarefa.itens">
-                <td>{{subtarefa.nome}}</td>
-                <td>
-                  <div class="acoes">
-                    <button class="botao-editar" (click)="editarSubtarefa(subtarefa.nome)">
-                      <img src="../../../../assets/icone-editar.png" alt="Icone editar">
-                    </button>
-                    <button class="botao-excluir" routerLink="tarefa/excluirTarefa/{{ tarefa.id }}">
-                      <img src="../../../../assets/icone-excluir.png" alt="Icone excluir"></button>
-                  </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-
+<section class="container subtarefas ff-inter">
+    <div *ngFor="let item of listaDeItens">
+      <app-item
+      [item]="item">
+      </app-item>
     </div>
 </section>
 

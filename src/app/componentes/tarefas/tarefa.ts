@@ -4,12 +4,12 @@ export interface Tarefa {
 
   id?: number;
   titulo: string;
-  itens: Item[];
 }
-
 
 export interface Item {
 
   id?: number;
+  tarefa_id?: number;
   nome: string;
+  tempo: string;
 }

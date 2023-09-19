@@ -1,59 +1,3 @@
-.header {
-  display: inline;
-}
-
-.d-flex{
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  justify-content: center;
-}
-
-h3 {
-  color: black;
-  font-weight: 400;
-  font-size: 2rem;
-  text-align: center;
-}
-
-.subtarefas {
-  padding: 2rem 0;
-}
-
-.subtarefas form {
-  background: #C4EDFF;
-
-  border: none;
-  border-radius: 20px;
-
-  display: flex;
-  flex-direction: column;
-
-  padding: 2rem;
-}
-
-.subtarefas form label {
-  color: #154580;
-  font-weight: bold;
-  margin: 0 0 1rem;
-}
-
-.subtarefas form .input {
-  border: none;
-  height: 40px;
-  padding: 1rem 2rem;
-  border-radius: 20px;
-  margin: 0.5rem 0 2rem;
-}
-
-
-.subtarefas form .textarea {
-  border: none;
-  padding: 1rem 2rem;
-  border-radius: 20px;
-  margin: 0.5rem 0 2rem;
-}
-
 .acoes {
   display: flex;
   justify-content: center;
@@ -66,3 +10,42 @@ h3 {
   margin-top: 70px;
   width: 200px;
 }
+
+.editar-item {
+  padding: 2rem 0;
+}
+
+.editar-item form {
+  background: #C4EDFF;
+
+  border: none;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 2rem;
+}
+
+.editar-item form label {
+  color: #154580;
+  font-weight: bold;
+  margin: 0 0 1rem;
+}
+
+.editar-item form .input {
+  border: none;
+  height: 40px;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  margin: 0.5rem 0 2rem;
+}
+
+
+.editar-item form .textarea {
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  margin: 0.5rem 0 2rem;
+}
+

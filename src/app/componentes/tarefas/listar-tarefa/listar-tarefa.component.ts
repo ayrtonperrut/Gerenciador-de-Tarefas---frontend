@@ -11,12 +11,11 @@ export class ListarTarefaComponent implements OnInit {
 
   listaDeTarefas: Tarefa[] = [];
 
-
   constructor(private service: TarefaService) { }
 
   ngOnInit(): void {
     this.service.listar().subscribe((listadeTarefas) => {
-      this.listaDeTarefas = listadeTarefas;
+      this.listaDeTarefas = listadeTarefas
     })
   }
 

@@ -9,6 +9,12 @@
              id="tarefa"
              formControlName="titulo"
              placeholder="Digite o título da tarefa">
+      <input type="textarea"
+             class="input"
+             id="tarefa"
+             formControlName="itens"
+             hidden
+            >
 
       <div class="acoes">
         <button class="botao" (click)="editarTarefa()">Salvar</button>

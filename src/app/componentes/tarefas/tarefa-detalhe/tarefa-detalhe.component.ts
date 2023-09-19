@@ -1,9 +1,11 @@
-
 import { Component, Input, OnInit } from '@angular/core';
 import { Item, Tarefa } from '../tarefa';
 import { TarefaService } from '../tarefa.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { ItemService } from '../itens/item.service';
+import { ItemComponent } from '../itens/item/item.component';
+import { CriarItemComponent } from '../itens/criar-item/criar-item.component';
 
 @Component({
   selector: 'app-tarefa-detalhe',
@@ -13,12 +15,15 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class TarefaDetalheComponent implements OnInit {
 
   @Input() isOpenModal = false
+  isOpenModalUpdate = false
   tarefa!: Tarefa
-
+  listaDeItens: any[] = []
   formulario!: FormGroup
-  constructor(private service : TarefaService,
+
+  constructor(private service: TarefaService,
               private route: ActivatedRoute,
               private router: Router,
+              private itemService: ItemService,
               private formBuilder: FormBuilder
             ) { }
 
@@ -26,9 +31,10 @@ export class TarefaDetalheComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get('id')
     this.service.getById(parseInt(id!)).subscribe((tarefa) => {
       this.tarefa = tarefa
-      this.formulario = this.formBuilder.group({
-        itens: ['']
-      })
+    })
+    this.itemService.listarItens(parseInt(id!))
+    .subscribe((itens) => {
+      this.listaDeItens = itens
     })
   }
 
@@ -36,31 +42,8 @@ export class TarefaDetalheComponent implements OnInit {
     this.isOpenModal = true
   }
 
-  adicionarSubtarefa() {
-    let elemento = document.getElementById('itens') as HTMLInputElement
-    let item = elemento?.value
-    let id = criaIdItem(this.tarefa)
-    this.tarefa.itens.push({id: id, nome: item})
-    this.service.editar(this.tarefa).subscribe(() => {
-
-      this.router.navigate([`tarefa/tarefaDetalhe/:${this.tarefa.id}`])
-      this.isOpenModal = false
-    })
+  voltar() {
+    this.router.navigateByUrl('/listarTarefa', {skipLocationChange: true})
   }
-
-  cancelar() {
-   this.isOpenModal = false
-  }
-
-  editarSubtarefa(nome: String) {
-    this.isOpenModal = true
-    this.formulario = this.formBuilder.group({
-      itens: [nome]
-    })
-  }
-
-}
-function criaIdItem(tarefa: Tarefa): number {
-  return tarefa.itens.length + 1
 }
 

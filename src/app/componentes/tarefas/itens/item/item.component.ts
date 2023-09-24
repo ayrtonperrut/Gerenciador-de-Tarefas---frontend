@@ -18,7 +18,7 @@ export class ItemComponent implements OnInit {
     id: 1,
     tarefa_id: 1,
     nome: 'Primeiro item',
-    tempo: '2h 30m'
+    tempo: ''
   }
 
 }

@@ -7,6 +7,7 @@ import { ExcluirTarefaComponent } from './componentes/tarefas/excluir-tarefa/exc
 import { TarefaDetalheComponent } from './componentes/tarefas/tarefa-detalhe/tarefa-detalhe.component';
 import { CriarItemComponent } from './componentes/tarefas/itens/criar-item/criar-item.component';
 import { EditarItemComponent } from './componentes/tarefas/itens/editar-item/editar-item.component';
+import { ExcluirItemComponent } from './componentes/tarefas/itens/excluir-item/excluir-item.component';
 
 const routes: Routes = [
   {path: '',
@@ -40,6 +41,10 @@ const routes: Routes = [
 {
   path: 'item/editarItem/:id',
   component: EditarItemComponent
+},
+{
+  path: 'item/excluirItem/:id',
+  component: ExcluirItemComponent
 }
 ];
 

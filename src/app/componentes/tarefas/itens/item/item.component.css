@@ -1,0 +1,14 @@
+.itens {
+  display: inline-flex;
+  width:940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nome,
+.tempo {
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  margin: 0 auto;
+}

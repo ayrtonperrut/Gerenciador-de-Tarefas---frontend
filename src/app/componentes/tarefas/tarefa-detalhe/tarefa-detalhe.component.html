@@ -8,15 +8,20 @@
       <button class="botao" (click)="voltar()">Voltar</button>
     </div>
   </header>
-</section>
 
-<section class="container subtarefas ff-inter">
+  <div class="titulo ff-inter">
+    <h3>Subtarefas Cadastradas</h3>
+  </div>
+
+  <div class="itens ff-inter">
     <div *ngFor="let item of listaDeItens">
       <app-item
       [item]="item">
       </app-item>
     </div>
+  </div>
 </section>
+
 
 
 

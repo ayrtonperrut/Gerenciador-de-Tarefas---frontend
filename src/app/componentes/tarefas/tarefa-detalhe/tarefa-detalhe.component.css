@@ -14,44 +14,8 @@ h3 {
   font-weight: 400;
   font-size: 2rem;
   text-align: center;
-}
-
-.subtarefas {
-  padding: 2rem 0;
-}
-
-.subtarefas form {
-  background: #C4EDFF;
-
-  border: none;
-  border-radius: 20px;
-
-  display: flex;
-  flex-direction: column;
-
-  padding: 2rem;
-}
-
-.subtarefas form label {
-  color: #154580;
-  font-weight: bold;
-  margin: 0 0 1rem;
-}
-
-.subtarefas form .input {
-  border: none;
-  height: 40px;
-  padding: 1rem 2rem;
-  border-radius: 20px;
-  margin: 0.5rem 0 2rem;
-}
-
-
-.subtarefas form .textarea {
-  border: none;
-  padding: 1rem 2rem;
-  border-radius: 20px;
-  margin: 0.5rem 0 2rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .acoes {

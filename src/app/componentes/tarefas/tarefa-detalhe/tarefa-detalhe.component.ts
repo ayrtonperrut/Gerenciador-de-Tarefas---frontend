@@ -4,8 +4,6 @@ import { TarefaService } from '../tarefa.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ItemService } from '../itens/item.service';
-import { ItemComponent } from '../itens/item/item.component';
-import { CriarItemComponent } from '../itens/criar-item/criar-item.component';
 
 @Component({
   selector: 'app-tarefa-detalhe',

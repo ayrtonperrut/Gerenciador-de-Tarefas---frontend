@@ -15,6 +15,7 @@ import { TarefaDetalheComponent } from './componentes/tarefas/tarefa-detalhe/tar
 import { ItemComponent } from './componentes/tarefas/itens/item/item.component';
 import { CriarItemComponent } from './componentes/tarefas/itens/criar-item/criar-item.component';
 import { EditarItemComponent } from './componentes/tarefas/itens/editar-item/editar-item.component';
+import { ExcluirItemComponent } from './componentes/tarefas/itens/excluir-item/excluir-item.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { EditarItemComponent } from './componentes/tarefas/itens/editar-item/edi
     TarefaDetalheComponent,
     ItemComponent,
     CriarItemComponent,
-    EditarItemComponent
+    EditarItemComponent,
+    ExcluirItemComponent
   ],
   imports: [
     BrowserModule,

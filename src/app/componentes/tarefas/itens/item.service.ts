@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Item } from '../tarefa';
-import { Observable } from 'rxjs';
+import { Observable, identity } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -31,5 +31,10 @@ export class ItemService {
   editar(item: Item): Observable<Item> {
     const url = `${this.API}/${item.id}`
     return this.http.put<Item>(url, item)
+  }
+
+  excluir(id: number): Observable<Item> {
+    const url = `${this.API}/${id}`
+    return this.http.delete<Item>(url)
   }
 }

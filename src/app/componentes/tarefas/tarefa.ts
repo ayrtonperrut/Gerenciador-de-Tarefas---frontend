@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+import { Time } from "@angular/common";
 
 export interface Tarefa {
 

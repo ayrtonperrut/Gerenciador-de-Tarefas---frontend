@@ -17,6 +17,7 @@ export class TarefaDetalheComponent implements OnInit {
   tarefa!: Tarefa
   listaDeItens: any[] = []
   formulario!: FormGroup
+  totalDeTempo: any
 
   constructor(private service: TarefaService,
               private route: ActivatedRoute,
@@ -33,7 +34,9 @@ export class TarefaDetalheComponent implements OnInit {
     this.itemService.listarItens(parseInt(id!))
     .subscribe((itens) => {
       this.listaDeItens = itens
+      this.getTotaldeTempo()
     })
+
   }
 
   chamaModalSubtarefa() {
@@ -42,6 +45,33 @@ export class TarefaDetalheComponent implements OnInit {
 
   voltar() {
     this.router.navigateByUrl('/listarTarefa', {skipLocationChange: true})
+  }
+
+  getTotaldeTempo() {
+    var horas: number = 0
+    var minutos: number = 0
+
+    for (let i = 0; i < this.listaDeItens.length; i++) {
+      let split = this.listaDeItens[i].tempo.split('h', 2)
+      if (!split[0].includes('m')) {
+        horas = horas + parseInt(split[0])
+
+        if (split[1].includes('m')) {
+          split[1].replace(' ', '')
+          split[1].replace('m', '')
+          minutos = minutos + parseInt(split[1])
+        }
+      } else {
+        minutos = minutos + parseInt(split[0])
+      }
+
+      if (minutos > 59) {
+        horas = horas + 1
+        minutos = minutos - 60
+      }
+    }
+    this.totalDeTempo = horas + 'h ' + minutos +'m'
+
   }
 }
 

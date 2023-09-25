@@ -11,6 +11,10 @@
     {
       "titulo": "Arrumar a casa",
       "id": 3
+    },
+    {
+      "titulo": "Lavar o carro",
+      "id": 4
     }
   ],
   "item": [
@@ -109,6 +113,66 @@
       "nome": "Teste ",
       "tempo": "30m",
       "id": 16
+    },
+    {
+      "tarefa_id": 3,
+      "nome": "Teste only hours",
+      "tempo": "2h",
+      "id": 17
+    },
+    {
+      "tarefa_id": 3,
+      "nome": "teste",
+      "tempo": "1h 45m",
+      "id": 18
+    },
+    {
+      "tarefa_id": 3,
+      "nome": "teste",
+      "tempo": "14m",
+      "id": 19
+    },
+    {
+      "tarefa_id": 4,
+      "nome": "Peparar materiais",
+      "tempo": "15m",
+      "id": 20
+    },
+    {
+      "tarefa_id": 4,
+      "id": 21,
+      "nome": "tirar tapetes ",
+      "tempo": "5m"
+    },
+    {
+      "tarefa_id": 4,
+      "nome": "prepara sabao",
+      "tempo": "2m",
+      "id": 22
+    },
+    {
+      "tarefa_id": 4,
+      "nome": "Aspirar parte interna",
+      "tempo": "37m",
+      "id": 23
+    },
+    {
+      "tarefa_id": 4,
+      "nome": "lavar tapetes",
+      "tempo": "25m",
+      "id": 24
+    },
+    {
+      "tarefa_id": 4,
+      "nome": "passar sabão no carro",
+      "tempo": "1h 13m",
+      "id": 25
+    },
+    {
+      "tarefa_id": 4,
+      "nome": "enxaguar",
+      "tempo": "30m",
+      "id": 26
     }
   ]
 }

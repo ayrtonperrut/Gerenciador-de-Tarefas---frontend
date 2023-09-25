@@ -2,6 +2,7 @@
   <header class="header" *ngIf="tarefa">
     <div class="titulo ff-inter">
       <h3>Título: {{tarefa.titulo}}</h3>
+      <h3>Tempo Total: {{ totalDeTempo }}</h3>
     </div>
     <div class="acao">
       <button class="botao" routerLink="criarItem" routerLinkActive="router-link-active" > Adicionar subtarefa</button>

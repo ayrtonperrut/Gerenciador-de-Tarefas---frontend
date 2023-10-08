@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, NgForm } from '@angular/forms';
 import { TarefaService } from '../tarefa.service';
 import { Router } from '@angular/router';
-import { Tarefa } from '../tarefa';
 
 @Component({
   selector: 'app-criar-tarefa',
@@ -29,6 +28,16 @@ export class CriarTarefaComponent implements OnInit {
     this.service.criar(this.formulario.value).subscribe(() => {
       this.router.navigate(['listarTarefa'])
     })
+  }
 
+  habilitarBotao(): string {
+    var botao
+    if (this.formulario.valid) {
+      botao = 'botao'
+    } else {
+      botao = 'botao__desabilitado'
+    }
+
+    return botao
   }
 }

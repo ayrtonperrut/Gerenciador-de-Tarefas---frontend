@@ -16,6 +16,7 @@ import { ItemComponent } from './componentes/tarefas/itens/item/item.component';
 import { CriarItemComponent } from './componentes/tarefas/itens/criar-item/criar-item.component';
 import { EditarItemComponent } from './componentes/tarefas/itens/editar-item/editar-item.component';
 import { ExcluirItemComponent } from './componentes/tarefas/itens/excluir-item/excluir-item.component';
+import { MensagemComponent } from './componentes/mensagem/mensagem.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ExcluirItemComponent } from './componentes/tarefas/itens/excluir-item/e
     ItemComponent,
     CriarItemComponent,
     EditarItemComponent,
-    ExcluirItemComponent
+    ExcluirItemComponent,
+    MensagemComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,6 @@ import { ExcluirItemComponent } from './componentes/tarefas/itens/excluir-item/e
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]

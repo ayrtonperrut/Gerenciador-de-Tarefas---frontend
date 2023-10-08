@@ -4,20 +4,24 @@
 
     <form [formGroup]="formulario" *ngIf="formulario">
       <label for="tarefa">Tarefa</label>
-      <input type="textarea"
-             class="input"
-             id="tarefa"
-             formControlName="titulo"
-             placeholder="Digite o título da tarefa">
-      <input type="textarea"
-             class="input"
-             id="tarefa"
-             formControlName="itens"
-             hidden
-            >
+      <input
+        type="textarea"
+        class="input"
+        id="tarefa"
+        formControlName="titulo"
+        placeholder="Digite o título da tarefa"
+        required>
 
+        <div *ngIf="(formulario.get('titulo')?.invalid && formulario.get('titulo')?.touched) || formulario.get('titulo')?.dirty">
+          <app-mensagem *ngIf="formulario.get('titulo')?.errors?.['required']"
+           mensagem="O campo título é obrigatório."></app-mensagem>
+       </div>
       <div class="acoes">
-        <button class="botao" (click)="editarTarefa()">Salvar</button>
+        <button
+          class="botao"
+          [disabled]="!formulario.valid"
+          [ngClass]="habilitarBotao()"
+          (click)="editarTarefa()">Salvar</button>
          <button class="botao" (click)="cancelar()">Cancelar</button>
       </div>
     </form>

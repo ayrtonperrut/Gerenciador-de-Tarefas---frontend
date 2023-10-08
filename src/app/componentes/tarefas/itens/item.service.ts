@@ -8,14 +8,13 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ItemService {
 
-  private readonly API = 'http://localhost:3000/item';
+  private readonly API = 'http://localhost:8080/item';
 
 
   constructor(private http: HttpClient) { }
 
   listarItens(tarefa_id: number): Observable<Item[]> {
-
-    const url = `${this.API}?tarefa_id=${tarefa_id}`
+    const url = `${this.API}/${tarefa_id}/itens`
     return this.http.get<Item[]>(url)
   }
 

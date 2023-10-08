@@ -11,7 +11,7 @@ import { Item } from '../../tarefa';
 export class ExcluirItemComponent implements OnInit {
 
   item: Item = {
-    tarefa_id: 0,
+    tarefaId: 0,
     id: 0,
     nome: '',
     tempo: ''
@@ -32,13 +32,13 @@ export class ExcluirItemComponent implements OnInit {
   excluirItem() {
     if (this.item.id) {
       this.service.excluir(this.item.id).subscribe(() =>{
-        this.router.navigate(['/tarefa/tarefaDetalhe/', this.item.tarefa_id])
+        this.router.navigate(['/tarefa/tarefaDetalhe/', this.item.tarefaId])
       })
     }
   }
 
   cancelar() {
-    this.router.navigate(['/tarefa/tarefaDetalhe/', this.item.tarefa_id])
+    this.router.navigate(['/tarefa/tarefaDetalhe/', this.item.tarefaId])
   }
 
 }

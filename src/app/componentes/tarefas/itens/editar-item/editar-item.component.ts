@@ -11,7 +11,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class EditarItemComponent implements OnInit {
 
   formulario!: FormGroup
-  tarefa_id!: any
+  tarefaId!: any
 
   constructor(private service: ItemService,
     private router: Router,
@@ -21,9 +21,9 @@ export class EditarItemComponent implements OnInit {
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id')
     this.service.getById(parseInt(id!)).subscribe((item) => {
-      this.tarefa_id = item.tarefa_id
+      this.tarefaId = item.tarefaId
       this.formulario = this.formBuilder.group({
-        tarefa_id: [item.tarefa_id],
+        tarefaId: [item.tarefaId],
         id: [item.id],
         nome: [item.nome],
         tempo: [item.tempo]
@@ -33,7 +33,7 @@ export class EditarItemComponent implements OnInit {
 
   editarItem() {
     this.service.editar(this.formulario.value).subscribe(() => {
-      this.router.navigate(['/tarefa/tarefaDetalhe/', this.tarefa_id])
+      this.router.navigate(['/tarefa/tarefaDetalhe/', this.tarefaId])
     })
   }
 

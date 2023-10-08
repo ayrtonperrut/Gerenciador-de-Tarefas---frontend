@@ -9,7 +9,7 @@ export interface Tarefa {
 export interface Item {
 
   id?: number;
-  tarefa_id?: number;
+  tarefaId?: number;
   nome: string;
   tempo: string;
 }

@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class TarefaService {
 
-  private readonly API = 'http://localhost:3000/tarefa';
+  private readonly API = 'http://localhost:8080/tarefa';
 
   constructor(private http: HttpClient) { }
 

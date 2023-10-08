@@ -16,7 +16,7 @@ export class ItemComponent implements OnInit {
 
   @Input() item: Item = {
     id: 1,
-    tarefa_id: 1,
+    tarefaId: 1,
     nome: 'Primeiro item',
     tempo: ''
   }

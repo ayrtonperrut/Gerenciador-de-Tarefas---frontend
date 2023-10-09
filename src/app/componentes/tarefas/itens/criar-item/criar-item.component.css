@@ -49,3 +49,19 @@
   margin: 0.5rem 0 2rem;
 }
 
+.botao__desabilitado {
+  margin: 5px;
+  margin-top: 70px;
+  width: 200px;
+}
+
+.erro__texto {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--vermelho);
+}
+
+.ng-touched.ng-invalid:not(form) {
+  border-color: red;
+  color: red;
+}

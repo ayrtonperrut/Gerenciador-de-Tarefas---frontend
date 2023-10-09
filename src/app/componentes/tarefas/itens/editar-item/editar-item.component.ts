@@ -40,4 +40,15 @@ export class EditarItemComponent implements OnInit {
   cancelar() {
     this.router.navigate(['/listarTarefa'])
   }
+
+  habilitarBotao(): string {
+    var botao
+    if (this.formulario.valid) {
+      botao = 'botao'
+    } else {
+      botao = 'botao__desabilitado'
+    }
+
+    return botao
+  }
 }

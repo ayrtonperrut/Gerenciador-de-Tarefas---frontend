@@ -39,4 +39,14 @@ export class CriarItemComponent implements OnInit {
     this.router.navigate([`tarefa/tarefaDetalhe/${this.tarefa_id}`])
   }
 
+  habilitarBotao(): string {
+    var botao
+    if (this.formulario.valid) {
+      botao = 'botao'
+    } else {
+      botao = 'botao__desabilitado'
+    }
+
+    return botao
+  }
 }

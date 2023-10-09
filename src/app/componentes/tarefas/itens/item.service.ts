@@ -36,4 +36,39 @@ export class ItemService {
     const url = `${this.API}/${id}`
     return this.http.delete<Item>(url)
   }
+
+  isFormatoTempoValido(tempo: string): boolean {
+    var isFormatoValido = false
+    var quantidadeH = 0
+    var quantidadeM = 0
+
+    if (tempo.match(/(\d)\h/)) {
+      let splitInputHoras = tempo.split('')
+      for (let i = 0 ; i < splitInputHoras.length ; i++) {
+        if (splitInputHoras[i] === 'h') {
+          quantidadeH ++
+        }
+      }
+    }
+
+    if (tempo.match(/(\d)\m/)) {
+      let splitInputMinutos = tempo.split('')
+      for (let i = 0 ; i < splitInputMinutos.length ; i++) {
+        if (splitInputMinutos[i] === 'm') {
+          quantidadeM ++
+        }
+      }
+      if (quantidadeH === 1) {
+        isFormatoValido = true
+      }
+    }
+
+    if ((quantidadeH === 1 && quantidadeM === 1)
+      || (quantidadeH === 1 && quantidadeM === 0)
+      || (quantidadeH === 0 && quantidadeM === 1 )) {
+
+      isFormatoValido = true
+    }
+    return isFormatoValido
+  }
 }

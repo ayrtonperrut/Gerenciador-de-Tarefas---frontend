@@ -3,20 +3,44 @@
     <h2>Editar Subtarefa:</h2>
     <form [formGroup]="formulario" *ngIf="formulario">
       <label for="'item'">Item</label>
-      <input type="textarea"
-             class="input"
-             id="nome"
-             formControlName="nome"
-             placeholder="Digite título da subtarefa"
-            >
-      <input type="textarea"
-             class="input"
-             id="tempo"
-             formControlName="tempo"
-             placeholder="Digite tempo a ser executado"
-            >
+      <input
+        type="textarea"
+        class="input"
+        id="nome"
+        formControlName="nome"
+        placeholder="Digite título da subtarefa"
+        required
+        >
+
+      <div *ngIf="(formulario.get('nome')?.invalid && formulario.get('nome')?.touched) || formulario.get('nome')?.dirty">
+        <app-mensagem *ngIf="formulario.get('nome')?.errors?.['required']"
+            mensagem="O campo Nome é obrigatório."></app-mensagem>
+      </div>
+
+      <input
+        type="textarea"
+        class="input"
+        id="tempo"
+        formControlName="tempo"
+        placeholder="Digite tempo a ser executado"
+        required
+        formatoTempo
+        >
+
+      <div *ngIf="(formulario.get('tempo')?.invalid && formulario.get('tempo')?.touched) || formulario.get('tempo')?.dirty">
+        <app-mensagem *ngIf="formulario.get('tempo')?.errors?.['required']"
+          mensagem="O campo tempo é obrigatório."></app-mensagem>
+
+        <app-mensagem *ngIf="formulario.get('tempo')?.errors?.['formatoTempo']"
+          mensagem="O campo Tempo deve seguir o seguinte formato de exemplo: 6h 30m"></app-mensagem>
+      </div>
+
       <div class="acoes">
-        <button class="botao" (click)="editarItem()">Salvar</button>
+        <button
+          class="botao"
+          [disabled]="!formulario.valid"
+          [ngClass]="habilitarBotao()"
+          (click)="editarItem()">Salvar</button>
         <button  class="botao" routerLink="/tarefa/tarefaDetalhe/{{this.tarefaId}}">Cancelar</button>
       </div>
     </form>

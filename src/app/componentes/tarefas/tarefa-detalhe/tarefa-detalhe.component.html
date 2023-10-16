@@ -1,25 +1,16 @@
 <section class="container d-flex">
   <header class="header" *ngIf="tarefa">
     <div class="titulo ff-inter">
-      <h3>Título: {{tarefa.titulo}}</h3>
-      <h3>Tempo Total: {{ totalDeTempo }}</h3>
+      <h2>{{ tarefa.titulo }}</h2>
+      <h2>{{ totalDeTempo }}</h2>
     </div>
     <div class="acao">
       <button class="botao" routerLink="criarItem" routerLinkActive="router-link-active" > Adicionar subtarefa</button>
       <button class="botao" (click)="voltar()">Voltar</button>
     </div>
   </header>
-
-  <div class="titulo ff-inter">
-    <h3>Subtarefas Cadastradas</h3>
-  </div>
-
-  <div class="itens ff-inter">
-    <div *ngFor="let item of listaDeItens">
-      <app-item
-      [item]="item">
-      </app-item>
-    </div>
+  <div>
+    <app-listar-item></app-listar-item>
   </div>
 </section>
 

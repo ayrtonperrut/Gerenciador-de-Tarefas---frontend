@@ -18,6 +18,7 @@ import { EditarItemComponent } from './componentes/tarefas/itens/editar-item/edi
 import { ExcluirItemComponent } from './componentes/tarefas/itens/excluir-item/excluir-item.component';
 import { MensagemComponent } from './componentes/mensagem/mensagem.component';
 import { FormatoTempoDirective } from './diretivas/formato-tempo.directive';
+import { ListarItemComponent } from './componentes/tarefas/itens/listar-item/listar-item.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { FormatoTempoDirective } from './diretivas/formato-tempo.directive';
     EditarItemComponent,
     ExcluirItemComponent,
     MensagemComponent,
-    FormatoTempoDirective
+    FormatoTempoDirective,
+    ListarItemComponent
   ],
   imports: [
     BrowserModule,

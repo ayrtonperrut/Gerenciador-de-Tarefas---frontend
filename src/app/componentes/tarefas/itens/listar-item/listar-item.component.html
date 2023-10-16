@@ -1,0 +1,13 @@
+<section>
+  <header class="container ff-inter">
+    <h3>Subtarefas Cadastradas</h3>
+  </header>
+  <body>
+    <div class="lista" *ngFor="let item of listaDeItens">
+      <app-item
+      [item]="item">
+      </app-item>
+    </div>
+  </body>
+</section>
+

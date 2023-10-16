@@ -12,19 +12,17 @@ import { ItemService } from '../itens/item.service';
 })
 export class TarefaDetalheComponent implements OnInit {
 
-  @Input() isOpenModal = false
   isOpenModalUpdate = false
   tarefa!: Tarefa
   listaDeItens: any[] = []
-  formulario!: FormGroup
   totalDeTempo: any
 
-  constructor(private service: TarefaService,
-              private route: ActivatedRoute,
-              private router: Router,
-              private itemService: ItemService,
-              private formBuilder: FormBuilder
-            ) { }
+  constructor(
+    private service: TarefaService,
+    private route: ActivatedRoute,
+    private router: Router,
+    private itemService: ItemService
+    ) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id')
@@ -37,10 +35,6 @@ export class TarefaDetalheComponent implements OnInit {
       this.getTotaldeTempo()
     })
 
-  }
-
-  chamaModalSubtarefa() {
-    this.isOpenModal = true
   }
 
   voltar() {
@@ -71,7 +65,6 @@ export class TarefaDetalheComponent implements OnInit {
       }
     }
     this.totalDeTempo = horas + 'h ' + minutos +'m'
-
   }
 }
 

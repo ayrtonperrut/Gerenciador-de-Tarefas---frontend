@@ -1,8 +1,6 @@
-.itens {
-  display: inline-flex;
-  width:940px;
-  margin-left: auto;
-  margin-right: auto;
+.item {
+  display: flex;
+  margin: 3px;
 }
 
 .nome,
@@ -11,4 +9,9 @@
   margin-right: auto;
   width: 200px;
   margin: 0 auto;
+}
+
+.botoes {
+  display: flex;
+  gap: 5px
 }
